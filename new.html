@@ -74,9 +74,8 @@
                             </td>
                         </tr>
                         <tr align="center">
-                            <td id="td0" ng-click="setbackground(0)" style="background-color: white; 
-                            {{td == td0 ? 'border-color: thick solid red' : ''}} 
-                            " colspan="2"><span style="cursor: pointer">white</span></td>
+                            <td id="td0" ng-click="setbackground(0)" style="background-color: white" colspan="2"><span
+                                    style="cursor: pointer">white</span></td>
                             <td id="td1" ng-click="setbackground(1)" style="background-color: #161f2b" colspan="2"><span
                                     style="color: lightgrey; cursor: pointer">night</span></td>
                             <td id="td2" ng-click="setbackground(2)" style="background-color: black" colspan="2"><span
@@ -110,32 +109,45 @@
                         document.getElementById('h3').style.backgroundColor = blue;
                         document.getElementById('p').style.color = blue;
                         $scope.current = blue;
+
+                        $scope.setbackground($scope.td);
                         // document.getElementById('td'+$scope.td).style.border = 'thick solid '+blue;
+
                         break;
                     case 1:
                         document.getElementById('h3').style.backgroundColor = yellow;
                         document.getElementById('p').style.color = yellow;
                         $scope.current = yellow;
+
+                        $scope.setbackground($scope.td);
                         break;
                     case 2:
                         document.getElementById('h3').style.backgroundColor = pink;
                         document.getElementById('p').style.color = pink;
                         $scope.current = pink;
+
+                        $scope.setbackground($scope.td);
                         break;
                     case 3:
                         document.getElementById('h3').style.backgroundColor = purple;
                         document.getElementById('p').style.color = purple;
                         $scope.current = purple;
+
+                        $scope.setbackground($scope.td);
                         break;
                     case 4:
                         document.getElementById('h3').style.backgroundColor = orange;
                         document.getElementById('p').style.color = orange;
                         $scope.current = orange;
+
+                        $scope.setbackground($scope.td);
                         break;
                     case 5:
                         document.getElementById('h3').style.backgroundColor = green;
                         document.getElementById('p').style.color = green;
                         $scope.current = green;
+
+                        $scope.setbackground($scope.td);
                         break;
 
                     default:
@@ -148,21 +160,21 @@
                 switch (id) {
                     case 0:
                         document.body.style.backgroundColor = 'white';
-                        document.getElementById('td0').style.border = 'thick solid ' + $scope.current;
-                        document.getElementById('td1').style.border = null;
-                        document.getElementById('td2').style.border = null;
+                        document.getElementById('td0').style.borderBottom = 'thick solid ' + $scope.current;
+                        document.getElementById('td1').style.borderBottom = null;
+                        document.getElementById('td2').style.borderBottom = null;
                         break;
                     case 1:
                         document.body.style.backgroundColor = night;
-                        document.getElementById('td1').style.border = 'thick solid ' + $scope.current;
-                        document.getElementById('td0').style.border = null;
-                        document.getElementById('td2').style.border = null;
+                        document.getElementById('td1').style.borderBottom = 'thick solid ' + $scope.current;
+                        document.getElementById('td0').style.borderBottom = null;
+                        document.getElementById('td2').style.borderBottom = null;
                         break;
                     case 2:
                         document.body.style.backgroundColor = 'black';
-                        document.getElementById('td2').style.border = 'thick solid ' + $scope.current;
-                        document.getElementById('td1').style.border = null;
-                        document.getElementById('td0').style.border = null;
+                        document.getElementById('td2').style.borderBottom = 'thick solid ' + $scope.current;
+                        document.getElementById('td1').style.borderBottom = null;
+                        document.getElementById('td0').style.borderBottom = null;
                         break;
 
                     default:
